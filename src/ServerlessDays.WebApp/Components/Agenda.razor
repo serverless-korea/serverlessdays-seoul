@@ -1,0 +1,33 @@
+﻿<div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis" id="agenda">행사 일정</h1>
+    <div class="col-lg-6 mx-auto">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>시간</th>
+                    <th>제목</th>
+                    <th>발표자</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (this.SpeakerCollection.Any())
+                {
+                    foreach (var speaker in this.SpeakerCollection)
+                    {
+                        <tr>
+                            <td>@speaker.SessionStart &ndash; @speaker.SessionEnd</td>
+                            <td>@speaker.SessionTitle</td>
+                            <td>@speaker.Name</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3">준비중입니다</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

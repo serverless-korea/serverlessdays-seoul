@@ -1,4 +1,4 @@
-﻿namespace ServerlessDays.WebApp;
+﻿namespace ServerlessDays.WebApp.Models;
 
 public class NavigationItem
 {
