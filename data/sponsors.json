@@ -1,0 +1,29 @@
+[
+  {
+    "name": "스폰서 A",
+    "websiteUrl": "https://github.com/sponsor",
+    "logoImageUrl": "https://github.com/sponsor.png",
+    "social": {
+      "facebook": "https://facebook.com/sponsor",
+      "instagram": "https://instagram.com/sponsor"
+    }
+  },
+  {
+    "name": "스폰서 B",
+    "websiteUrl": "https://github.com/sponsor",
+    "logoImageUrl": "https://github.com/sponsor.png",
+    "social": {
+      "facebook": "https://facebook.com/sponsor",
+      "instagram": "https://instagram.com/sponsor"
+    }
+  },
+  {
+    "name": "스폰서 C",
+    "websiteUrl": "https://github.com/sponsor",
+    "logoImageUrl": "https://github.com/sponsor.png",
+    "social": {
+      "facebook": "https://facebook.com/sponsor",
+      "instagram": "https://instagram.com/sponsor"
+    }
+  }
+]

@@ -1,0 +1,60 @@
+﻿<div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis" id="team">운영진</h1>
+    @if (this.TeamMemberCollection.Any())
+    {
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-4 align-items-center justify-content-center">
+            @foreach (var teamMember in this.TeamMemberCollection)
+            {
+                <div class="feature col">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                        <img class="bi" src="@teamMember.ProfileImageUrl" alt="@teamMember.Name" width="250" />
+                    </div>
+                    <h2 class="fs-2 text-body-emphasis">@teamMember.Name</h2>
+                    <p>@teamMember.Bio</p>
+                    @if (string.IsNullOrWhiteSpace(teamMember.Social.GitHub) == false)
+                    {
+                        <a class="icon-link d-inline-block" href="@teamMember.Social.GitHub" style="margin-left: 5px; margin-right: 5px;">
+                            <img src="https://cdn.simpleicons.org/github" width="32" />
+                        </a>
+                    }
+                    @if (string.IsNullOrWhiteSpace(teamMember.Social.LinkedIn) == false)
+                    {
+                        <a class="icon-link d-inline-block" href="@teamMember.Social.LinkedIn" style="margin-left: 5px; margin-right: 5px;">
+                            <img src="https://cdn.simpleicons.org/linkedin" width="32" />
+                        </a>
+                    }
+                    @if (string.IsNullOrWhiteSpace(teamMember.Social.Twitter) == false)
+                    {
+                        <a class="icon-link d-inline-block" href="@teamMember.Social.Twitter" style="margin-left: 5px;">
+                            <img src="https://cdn.simpleicons.org/x" width="32" />
+                        </a>
+                    }
+                    @if (string.IsNullOrWhiteSpace(teamMember.Social.Facebook) == false)
+                    {
+                        <a class="icon-link d-inline-block" href="@teamMember.Social.Facebook" style="margin-left: 5px;">
+                            <img src="https://cdn.simpleicons.org/facebook" width="32" />
+                        </a>
+                    }
+                    @if (string.IsNullOrWhiteSpace(teamMember.Social.Instagram) == false)
+                    {
+                        <a class="icon-link d-inline-block" href="@teamMember.Social.Instagram" style="margin-left: 5px;">
+                            <img src="https://cdn.simpleicons.org/instagram" width="32" />
+                        </a>
+                    }
+                    @if (string.IsNullOrWhiteSpace(teamMember.Social.Website) == false)
+                    {
+                        <a class="icon-link d-inline-block" href="@teamMember.Social.Website" style="margin-left: 5px; margin-right: 5px;">
+                            <img src="https://cdn.simpleicons.org/microsoftedge" width="32" />
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">준비중입니다</p>
+        </div>
+    }
+</div>

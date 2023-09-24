@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Home",
+    "url": "/",
+    "icon": "",
+    "isExternal": false
+  },
+  {
+    "title": "발표자 모집",
+    "url": "#call-for-papers",
+    "icon": "",
+    "isExternal": false
+  },
+  {
+    "title": "행사 장소",
+    "url": "#venue",
+    "icon": "",
+    "isExternal": false
+  },
+  {
+    "title": "후원사",
+    "url": "#sponsors",
+    "icon": "",
+    "isExternal": false
+  },
+  {
+    "title": "행사 운영진",
+    "url": "#team",
+    "icon": "",
+    "isExternal": false
+  },
+  {
+    "title": "행동강령",
+    "url": "#code-of-conducts",
+    "icon": "",
+    "isExternal": false
+  }
+]
