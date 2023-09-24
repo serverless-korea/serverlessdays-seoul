@@ -49,6 +49,12 @@ jobs:
       run: |
         dotnet test -c Release
 
+    - name: Update database
+      if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref_name == 'main'
+      shell: bash
+      run: |
+        cp ./data/*.json ./src/ServerlessDays.WebApp/wwwroot/data/
+
     - name: Update basepath
       if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref_name == 'main'
       shell: pwsh
@@ -56,11 +62,8 @@ jobs:
         $content = Get-Content -Path ./src/ServerlessDays.WebApp/wwwroot/index.html
         $content -replace "<base href=`"/`" />", "<base href=`"/serverlessdays-seoul/`" />" | Set-Content -Path ./src/ServerlessDays.WebApp/wwwroot/index.html -Encoding UTF8 -Force
 
-    - name: Update database
-      if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref_name == 'main'
-      shell: bash
-      run: |
-        cp ./data/*.json ./src/ServerlessDays.WebApp/wwwroot/data/
+        $content = Get-Content -Path ./src/ServerlessDays.WebApp/wwwroot/data/navigation.json
+        $content -replace '"url": "/",', '"url": "/serverlessdays-seoul/",' | Set-Content -Path ./src/ServerlessDays.WebApp/wwwroot/data/navigation.json -Encoding UTF8 -Force
 
     - name: Publish artifact
       if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref_name == 'main'
@@ -72,7 +75,7 @@ jobs:
       if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref_name == 'main'
       uses: actions/upload-pages-artifact@v1
       with:
-        path: artifacts/publish/ServerlessDays.WebApp/release/wwwroot
+        path: src/ServerlessDays.WebApp/bin/Release/net7.0/publish/wwwroot
 
   deploy:
     name: Deploy to Pages
