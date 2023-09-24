@@ -1,0 +1,32 @@
+[
+  {
+    "name": "유저스틴",
+    "organisation": "마이크로소프트",
+    "bio": "자기소개",
+    "profileImageUrl": "https://github.com/justinyoo.png",
+    "social": {
+      "github": "https://github.com/justinyoo",
+      "linkedin": "https://linkedin.com/in/justinyoo"
+    }
+  },
+  {
+    "name": "정휘영",
+    "organisation": "메가존클라우드",
+    "bio": "자기소개",
+    "profileImageUrl": "https://github.com/fullmoonhwi1116.png",
+    "social": {
+      "github": "https://github.com/fullmoonhwi1116",
+      "linkedin": "https://www.linkedin.com/in/fullmoonhwi1116"
+    }
+  },
+  {
+    "name": "현지환",
+    "organisation": "메가존클라우드",
+    "bio": "자기소개",
+    "profileImageUrl": "https://github.com/lemonadegt.png",
+    "social": {
+      "github": "https://github.com/lemonadegt",
+      "linkedin": "https://www.linkedin.com/in/bitterlemon"
+    }
+  }
+]

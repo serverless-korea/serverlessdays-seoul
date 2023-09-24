@@ -15,7 +15,7 @@
                     foreach (var speaker in this.SpeakerCollection)
                     {
                         <tr>
-                            <td>@speaker.SessionStart &ndash; @speaker.SessionEnd</td>
+                            <td>@speaker.SessionStart.Value.ToString("HH:mm") &ndash; @speaker.SessionEnd.Value.ToString("HH:mm")</td>
                             <td>@speaker.SessionTitle</td>
                             <td>@speaker.Name</td>
                         </tr>
